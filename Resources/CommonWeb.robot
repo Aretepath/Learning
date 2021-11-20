@@ -6,7 +6,6 @@ Library  SeleniumLibrary
 *** Keywords ***
 Log In to Client
     Select Frame  id:iframe-signin-node
-   # current frame should contain  SignIn
     input text  xpath=/html/body/div/div/form/div[1]/section[1]/input  ${Username}
     sleep  1s
     input text  xpath=/html/body/div/div/form/div[1]/section[2]/input  ${Password}
