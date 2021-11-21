@@ -2,7 +2,6 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-${SPS_ID} = xpath=//*[@id="body-shop-content"]/div[3]
 
 *** Keywords ***
 Capture Payment Details
@@ -12,7 +11,7 @@ Capture Payment Details
     Log  Method for creating One Off Payment
     Select frame  payment-iframe-node
     Select frame  css=#payment-panel > iframe
-    Sleep  8s
+    wait until page contains  The contactor must be the credit/debit card holder or have card holders permission to use this card
     click element  css=#paymentAuth > div.payment-auth-container > div.toolkit-form-container > div > div.toolkit-payment-method-form.take-payment.capture-payment-details > form > div:nth-child(1) > div > div.payment-auth-credit-card-form-container > div.cardowner-type-switcher > div > ul > li:nth-child(1) > label
     Sleep  1s
     input text  css=#paymentAuth > div.payment-auth-container > div.toolkit-form-container > div > div.toolkit-payment-method-form.take-payment.capture-payment-details > form > div:nth-child(1) > div > div.payment-auth-credit-card-form-container > div.form-group.credit-card-number.unknown-credit-card > div > div > input  4111111111111111

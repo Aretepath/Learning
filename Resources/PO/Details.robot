@@ -31,7 +31,7 @@ Create Customer Details
     input text  xpath=//*[@id="date-of-birth-input-id-year"]  ${Details_Year}
     input text  xpath=//*[@id="postcode-address"]  ${Details_Postcode}
     click button  search-address
-    sleep  2s
+    sleep  3s
     click element  xpath=//*[@id="address-search-item-uprn135027254-index0"]
     wait until page contains  Confirm Address
     click button  confirm-customer-address-button

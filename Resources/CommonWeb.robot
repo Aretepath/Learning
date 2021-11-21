@@ -5,6 +5,7 @@ Library  SeleniumLibrary
 
 *** Keywords ***
 Log In to Client
+    Sleep  2s
     Select Frame  id:iframe-signin-node
     input text  xpath=/html/body/div/div/form/div[1]/section[1]/input  ${Username}
     sleep  1s
