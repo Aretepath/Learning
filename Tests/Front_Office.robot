@@ -4,7 +4,7 @@ Library  SeleniumLibrary
 Resource  ../Resources/CommonWeb.robot
 Resource  ../Resources/FrontOfficeApp.robot
 Test Setup  Start Web
-Test Teardown  Close Web
+#Test Teardown  Close Web
 
 # robot -d results tests/Front_Office.robot
 # robot -d results -N "Sell Sky Glass" tests/Front_Office.robot
@@ -15,7 +15,6 @@ ${BROWSER} =  chrome
 ${URL} =  https://dthing01u01.bskyb.com/residential/?channel=DIRECT
 ${Username}  rcl47
 ${Password}  Sup3rm4n
-${SPS_ID} = xpath=//*[@id="body-shop-content"]/div[3]
 
 *** Test Cases ***
 User Must Submit a Prospect Glass Sale

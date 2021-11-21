@@ -31,10 +31,17 @@ Create Customer Details
     input text  xpath=//*[@id="date-of-birth-input-id-year"]  ${Details_Year}
     input text  xpath=//*[@id="postcode-address"]  ${Details_Postcode}
     click button  search-address
-    sleep  3s
-    click element  xpath=//*[@id="address-search-item-uprn135027254-index0"]
-    wait until page contains  Confirm Address
-    click button  confirm-customer-address-button
+    Sleep  2s
+    click button  manual-address-link
+    input text  house-number-input  1B
+    input text  street-input  Alba Business Pavilions Alba Campus
+    input text  town-input  Livingston
+    input text  postcode-input  ${Details_Postcode}
+    click button  submit-manual-address
+    Sleep  3s
+    click element  css=#address-search-item-uprnundefined-index0
+    Sleep  2s
+    click element  css=#confirm-customer-address-button
     wait until page contains  TV hardware will be delivered to:
     Sleep  4s
     click element  xpath=//*[@id="slot-0-0"]/div
