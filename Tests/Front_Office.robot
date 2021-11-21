@@ -4,7 +4,7 @@ Library  SeleniumLibrary
 Resource  ../Resources/CommonWeb.robot
 Resource  ../Resources/FrontOfficeApp.robot
 Test Setup  Start Web
-#Test Teardown  Close Web
+Test Teardown  Close Web
 
 # robot -d results tests/Front_Office.robot
 # robot -d results -N "Sell Sky Glass" tests/Front_Office.robot
