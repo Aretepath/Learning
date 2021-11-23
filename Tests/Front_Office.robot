@@ -12,8 +12,10 @@ Test Teardown  Close Web
 
 *** Variables ***
 ${BROWSER} =  chrome
-${URL} =  https://dthing01u01.bskyb.com/residential/?channel=DIRECT
-${Username}  rcl47
+${URL} =  ${U01}
+${U01} =  https://dthing01u01.bskyb.com/residential/?channel=DIRECT
+${E03} =  https://dthing01e03.bskyb.com/residential/?channel=DIRECT
+${Username}  rcl47automation
 ${Password}  Sup3rm4n
 
 *** Test Cases ***
