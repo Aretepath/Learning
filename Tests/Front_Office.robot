@@ -9,6 +9,9 @@ Test Teardown  Close Web
 # robot -d results tests/Front_Office.robot
 # robot -d results -N "Sell Sky Glass" tests/Front_Office.robot
 # robot -d results -i Sky_Glass_Sale -N "Sell Sky Glass" tests/Front_Office.robot
+#robot -d results -v URL=U01 -i Sky_Glass_Sale -N "Sell Sky Glass" tests/Front_Office.robot
+#robot -d results -v URL=U01 -i Sky_Glass_Addons_CCA -N "Sell Sky Glass" tests/Front_Office.robot
+
 
 *** Variables ***
 ${BROWSER} =  chrome
