@@ -25,16 +25,15 @@ ${Password}  Sup3rm4n
 User Must Submit a Prospect Glass Sale
     [Documentation]  User must Submit a glass Upfront Payment Small (prospect)
     [Tags]  Sky_Glass_Sale
-    log  The purpose of this test is to submit a prospect Sky Glass Customer
-    Log In to Client
-    Load Standard prospect Customer
-    Select Sky Glass Products
-    Confirm Key Facts
-    Select Marketing Prefrences
-    Create Customer Details
-    Confrim the consent
-    Capture Payment Details
-    Confirm Value Small Upfront
+    Given Log In to Client
+    and Load Standard prospect Customer
+    and Select Sky Glass Products
+    and Confirm Key Facts
+    and Select Marketing Prefrences
+    and Create Customer Details
+    and Confrim the consent
+    When Capture Payment Details
+    Then Confirm Value Small Upfront
     log  Sky Glass Prospect Customer submitted succesfully for upfront Payment
 
 User Must Submit a Prospect Glass Sale with Addons

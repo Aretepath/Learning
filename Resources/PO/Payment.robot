@@ -7,9 +7,10 @@ Library  SeleniumLibrary
 Capture Payment Details
     click button  basket-bar-checkout-button
     wait until page contains  Payment
-    Sleep  8s
+    Sleep  6s
     Log  Method for creating One Off Payment
     Select frame  payment-iframe-node
+    Sleep  1s
     Select frame  css=#payment-panel > iframe
     wait until page contains  The contactor must be the credit/debit card holder or have card holders permission to use this card
     click element  css=#paymentAuth > div.payment-auth-container > div.toolkit-form-container > div > div.toolkit-payment-method-form.take-payment.capture-payment-details > form > div:nth-child(1) > div > div.payment-auth-credit-card-form-container > div.cardowner-type-switcher > div > ul > li:nth-child(1) > label
@@ -44,4 +45,5 @@ Capture Payment Details
     Sleep  1s
     click button  css=#basket-bar-payment-button
     Log  Payment Details Captured Succesfully!
+    Sleep  2s
     wait until page contains  Order Confirmation
