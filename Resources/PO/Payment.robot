@@ -28,15 +28,16 @@ Capture Payment Details
     click button  css=#paymentAuth > div.external-module-footer > button
     unselect frame
     Log  Method for creating Continous Payment
-    Sleep  6s
+    Sleep  5s
     Select frame  billing-iframe-node
+    Sleep  3s
     Select frame  css=#payment-panel > iframe
     click element  css=#CRPD > div > div.column-container > div.panel-container > div > div > div.form-container > div.payment-methods > ul > li:nth-child(2) > label
     Sleep  1s
     click element  css=#CRPD > div > div.column-container > div.panel-container > div > div > div.form-container > div.toolkit-form-container > div > div > ul > li:nth-child(2) > a
     Sleep  1s
     click element  css=#CRPD > div > div.column-container > div.panel-container > div > div > div.form-container > div.toolkit-form-container > div > div > form > div > div > ul > li > label
-    Sleep  1s
+    Sleep  2s
     click element  css=#CRPD > div > div.column-container > div.panel-container > div > div > div.form-container > div.toolkit-form-container > div > div > form > div > div > ul > div > div > label
     Sleep  2s
     #ok Button
@@ -45,5 +46,5 @@ Capture Payment Details
     Sleep  1s
     click button  css=#basket-bar-payment-button
     Log  Payment Details Captured Succesfully!
-    Sleep  2s
+    Sleep  4s
     wait until page contains  Order Confirmation

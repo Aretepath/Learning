@@ -20,4 +20,5 @@ Confrim the consent CCA
     click element  xpath=//*[@id="previous-address-required-question-true-label"]
     Sleep  1s
     click button  confirm-affordability-check
+    Sleep  4s
     wait until page contains  The customer has been approved for the credit agreement

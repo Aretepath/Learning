@@ -15,7 +15,7 @@ Test Teardown  Close Web
 
 *** Variables ***
 ${BROWSER} =  chrome
-${URL} =  ${U01}
+${URL} =  ${E03}
 ${U01} =  https://dthing01u01.bskyb.com/residential/?channel=DIRECT
 ${E03} =  https://dthing01e03.bskyb.com/residential/?channel=DIRECT
 ${Username}  rcl47automation
@@ -40,16 +40,16 @@ User Must Submit a Prospect Glass Sale with Addons
     [Documentation]  User must Submit a glass CCA Payment Small (prospect)
     [Tags]  Sky_Glass_Addons_CCA
     log  The purpose of this test is to submit a prospect Sky Glass Customer with all the addons
-    Log In to Client
-    Load Standard prospect Customer
-    Select All Addons
-    Confirm Key Facts Addons
-    Select Marketing Prefrences
-    Create Customer Details
-    Confrim the consent CCA
-    Confirm Additional Key Facts
-    Capture Payment Details
-    Confirm Value Medium CCA
+    Given Log In to Client
+    and Load Standard prospect Customer
+    and Select All Addons
+    and Confirm Key Facts Addons
+    and Select Marketing Prefrences
+    and Create Customer Details
+    and Confrim the consent CCA
+    and Confirm Additional Key Facts
+    when Capture Payment Details
+    then Confirm Value Medium CCA
     log  Sky Glass Prospect Customer submitted succesfully for CCA Payment with all Addons
 
 

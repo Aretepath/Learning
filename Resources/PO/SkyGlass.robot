@@ -6,6 +6,7 @@ Library  SeleniumLibrary
 
 *** Keywords ***
 Select Sky Glass Products
+    Sleep  2s
     wait until page contains  Device
     Click element  soip-product-tile-0
     wait until page contains  Anthracite
