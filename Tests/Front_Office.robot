@@ -6,16 +6,15 @@ Resource  ../Resources/FrontOfficeApp.robot
 Test Setup  Start Web
 Test Teardown  Close Web
 
-# robot -d results tests/Front_Office.robot
-# robot -d results -N "Sell Sky Glass" tests/Front_Office.robot
-# robot -d results -i Sky_Glass_Sale -N "Sell Sky Glass" tests/Front_Office.robot
-#robot -d results -v URL=U01 -i Sky_Glass_Sale -N "Sell Sky Glass" tests/Front_Office.robot
-#robot -d results -v URL=U01 -i Sky_Glass_Addons_CCA -N "Sell Sky Glass" tests/Front_Office.robot
 
+# robot -d results -i Sky_Glass_Addons_CCA -N "Sell Sky Glass CCA" tests/Front_Office.robot
+# robot -d results -i Sky_Glass_Sale -N "Sell Sky Glass UFP" tests/Front_Office.robot
+# robot -d results -v URL=https://dthing01e03.bskyb.com/residential/?channel=DIRECT -i Sky_Glass_Addons_CCA -N "Sell Sky Glass CCA" tests/Front_Office.robot
+# robot -d results -v URL=https://dthing01e03.bskyb.com/residential/?channel=DIRECT -i Sky_Glass_Sale -N "Sell Sky Glass UFP" tests/Front_Office.robot
 
 *** Variables ***
 ${BROWSER} =  chrome
-${URL} =  ${E03}
+${URL} =  ${U01}
 ${U01} =  https://dthing01u01.bskyb.com/residential/?channel=DIRECT
 ${E03} =  https://dthing01e03.bskyb.com/residential/?channel=DIRECT
 ${Username}  rcl47automation
