@@ -4,7 +4,7 @@ Library  SeleniumLibrary
 Resource  ../Resources/CommonWeb.robot
 Resource  ../Resources/FrontOfficeApp.robot
 Test Setup  Start Web
-Test Teardown  Close Web
+#Test Teardown  Close Web
 
 
 # robot -d results -i Sky_Glass_Addons_CCA -N "Sell Sky Glass CCA" tests/Front_Office.robot
