@@ -6,13 +6,13 @@ Library  SeleniumLibrary
 
 *** Keywords ***
 Select Sky Glass Products
-    Sleep  2s
     wait until page contains  Device
-    Click element  soip-product-tile-0
+    wait until page contains  soip-product-tile-1
+    Click element  soip-product-tile-1
     wait until page contains  Anthracite
-    Click element  soip-frame-colour-tile-0
+    Click element  soip-frame-colour-tile-1
     wait until page contains  Payment
-    Click element  soip-payment-tile-2
+    Click element  soip-payment-tile-1
     sleep  2s
     Click Button  devices-confirm-button
     wait until page contains  Multiscreen devices
