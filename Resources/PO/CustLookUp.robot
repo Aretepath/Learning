@@ -10,9 +10,11 @@ Load Standard prospect Customer
     Sleep  1s
     click button  quick-search-button
     wait until page contains  Create new customer
-    click Button  menu-button--menu--1
+    click element  menu-button--menu
+   # click Button  menu-button--menu--1
     wait until page contains  Create new Sky Glass customer
-    click element  css=#option-0--menu--1
+    click element  option-0--menu--1
+    #click element  css=#option-0--menu--1 #css-16pfj9c-StyledText e1ejdvsm1 option-0--menu--1
     wait until page contains  How is the customer contacting us?
     click element  channel-select-id
     click element  css=#channel-select-id > option:nth-child(1)

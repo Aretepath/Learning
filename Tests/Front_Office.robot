@@ -4,19 +4,21 @@ Library  SeleniumLibrary
 Resource  ../Resources/CommonWeb.robot
 Resource  ../Resources/FrontOfficeApp.robot
 Test Setup  Start Web
-Test Teardown  Close Web
+#Test Teardown  Close Web
 
 
 # robot -d results -v URL=https://dthing01e03.bskyb.com/residential/?channel=DIRECT -i Sky_Glass_Sale -N "Sell Sky Glass UFP" tests/Front_Office.robot
 # robot -d results -i UFP -N "Sell Sky Glass Upfront Payment" tests/Front_Office.robot
 # robot -d results -i CCA -N "Sell Sky Glass Credit Card Agreement" tests/Front_Office.robot
 # robot -d results -i CCA -v URL:https://dthing01u01.bskyb.com/residential/?channel=DIRECT -N "Sell Sky Glass UFP" tests/Front_Office.robot
+# robot -d results -i CCA -v URL:https://dthing01e04.bskyb.com/residential/?channel=DIRECT -N "Sell Sky Glass UFP" tests/Front_Office.robot
 
 *** Variables ***
 ${BROWSER} =  chrome
-${URL} =
+${URL} =  ${E03}
 ${U01} =  https://dthing01u01.bskyb.com/residential/?channel=DIRECT
 ${E03} =  https://dthing01e03.bskyb.com/residential/?channel=DIRECT
+${E04} =  https://dthing01e04.bskyb.com/residential/?channel=DIRECT
 ${Username}  rcl47automation
 ${Password}  Sup3rm4n
 
